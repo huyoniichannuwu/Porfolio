@@ -1,0 +1,130 @@
+.projects__toolbar {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.projects__search {
+  width: 100%;
+  max-width: 360px;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 15px;
+  font-family: var(--font-body);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.projects__search:focus {
+  outline: none;
+  border-color: var(--accent-2);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-2) 25%, transparent);
+}
+
+.projects__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filterChip {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--ink-soft);
+  transition: all 0.2s ease;
+}
+
+.filterChip:hover {
+  border-color: var(--accent-2);
+  color: var(--accent-2);
+}
+
+.filterChip.is-active {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.projects__empty {
+  color: var(--ink-soft);
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+
+.projectCard__window {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.projectCard__preview {
+  height: 140px;
+  background: linear-gradient(150deg, var(--card-accent) 0%, transparent 140%),
+    var(--bg-alt);
+}
+
+.projectCard__body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.projectCard__title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.projectCard__desc {
+  font-size: 14px;
+  color: var(--ink-soft);
+  flex: 1;
+}
+
+.projectCard__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.projectCard__link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent-2);
+  margin-top: 4px;
+}
+
+.projectCard__link:hover {
+  text-decoration: underline;
+}

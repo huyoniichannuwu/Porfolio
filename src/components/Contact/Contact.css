@@ -1,0 +1,65 @@
+.contact {
+  background: var(--bg-alt);
+}
+
+.contact__form {
+  margin-top: 40px;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  box-shadow: var(--shadow);
+}
+
+.contact__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact__field label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.contact__field input,
+.contact__field textarea {
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 15px;
+  resize: vertical;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact__field input:focus,
+.contact__field textarea:focus {
+  outline: none;
+  border-color: var(--accent-2);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-2) 25%, transparent);
+}
+
+.contact__error {
+  font-size: 13px;
+  color: #e0575b;
+}
+
+.contact__success {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent-2);
+  background: color-mix(in srgb, var(--accent-2) 12%, transparent);
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+}
+
+.contact__form .btn {
+  align-self: flex-start;
+}
